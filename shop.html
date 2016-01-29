@@ -7,7 +7,7 @@
 	<body>
 		<header class="main-header">
 			<div class="container">
-				<div class="shop-logo">
+				<div class="shop-logo"> <!-- На внутренних страницах принято логотип делать ссылкой на главную страницу -->
 					<img src="http://placehold.it/150x100" width="150" height="100" alt="Барбершоп «Бородинский»">
 				</div>
 				<nav class="main-navigator">
@@ -37,6 +37,10 @@
 
 		<main class="container">
 			<h1 class="main-header">Средства для ухода</h1>
+			<!-- 
+				Ниже для блока breadcrumbs в целом все правильно, но div не особо тебе там нужен
+				Проще было бы класс breadcrumbs назначить непосредственно для ul. Так ты бы сократил использование лишних элементов в разметке
+			 -->
 			<div class="breadcrumbs">
 				<ul>
 					<li>
@@ -54,7 +58,10 @@
 			<div class="shop-content">
 
 				<div class="shop-content-left">
-
+					<!-- 
+						По форме все отлично, кроме только того, что группы фильтров manufactures-filter, goods-groups-filter лучше было бы назвать общим классом
+						Разные классы тебе там не нужны, так как стили у групп очень похожи
+					 -->
 					<form class="shop-filter" action="https://echo.htmlacademy.ru" method="post">
 						<fieldset class="manufactures-filter">
 							<legend>Производители</legend>
@@ -98,6 +105,10 @@
 								<label for="accessories-field">Аксессуары</label> 
 							</div>
 						</fieldset>
+						<!-- 
+							Чтобы форма отправлялась, нужен input type="submit" а не ссылка
+							Поэтому элемент ниже нужно с <a> заменить на <input>
+						 -->
 						<a class="btn" href="#">Показать</a>
 					</form>
 
@@ -107,6 +118,15 @@
 
 					<div class="shop-items-row">
 						<article class="shop-item">
+							<!-- 
+								Figure немного спорное решение тут, но в целом все неплохо 
+
+								Лично я бы так не заморачивался и сделал бы разметку картинка + название товара без figure и figcaption
+								Оставил бы просто <img> а figcaption сделал бы ссылкой (потому что всегда заголовок = ссылка на товар)
+
+								Но твой вариант тоже допустим, можно не менять
+								Выше комментарий просто для информации
+							-->
 							<figure class="shop-item-image">
 								<img src="http://placehold.it/150X100" width="150" height="100" alt="Travel kit">
 								<figcaption>
