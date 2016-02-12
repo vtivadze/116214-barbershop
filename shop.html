@@ -2,19 +2,30 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Барбершоп «Бородинский»</title>
+        <!--
+            <link href="css/normalize.css" type="text/css" rel="stylesheet">
+        -->
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body class="shop">
         <header class="main-header">
-            <div class="container">
+            <div class="container clear-fix">
+            <!--
                 <div class="logo-header">
                     <a href="index.html">
                         <img src="img/logo_barbershop_header.png" width="111" height="24" alt="Барбершоп «Бородинский»">
                     </a>
                 </div>
-                <nav class="main-navigation">
+            -->
+                <nav class="main-navigation column-left">
                     <ul>
+                        <li class="shop-logo">
+                            <a href="index.html">
+                                <img src="img/logo_barbershop_header.png" width="111" height="24" alt="Барбершоп «Бородинский»">
+                            </a>
+                        </li>
                         <li>
                             <a href="#">Информация</a>
                         </li>
@@ -32,7 +43,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="user-account">
+                <div class="user-account column-right">
                     <a class="login" href="#">Вход</a>
                 </div>
             </div>
@@ -53,8 +64,8 @@
             </ul>
 
 
-            <div class="shop-content">
-                <div class="shop-content-left">
+            <div class="shop-content clear-fix">
+                <div class="column-left">
 
                     <form class="shop-filter" action="https://echo.htmlacademy.ru" method="post">
                         <fieldset>
@@ -103,7 +114,7 @@
                     </form>
                 </div>
 
-                <div class="shop-content-right shop-items">
+                <div class="column-right shop-items">
 
                     <div class="shop-items-row">
                         <article class="shop-item">
@@ -199,20 +210,20 @@
         </main>
 
         <footer class="main-footer">
-            <div class="container">
-                <section class="footer-contacts">
+            <div class="container clear-fix">
+                <section class="footer-contacts column-left">
                     Барбершоп «Бородинский»<br>
                     Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
                     <a href="#">Как нас найти?</a><br>
                     Телефон: +7 (812) 666-02-66
                 </section>
-                <section class="footer-social">
+                <section class="footer-social column-left">
                     <p>Давайте дружить!</p>
                     <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
                     <a class="social-btn social-btn-vb" href="#">Фейсбук</a>
                     <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
                 </section>
-                <section class="footer-copyright">
+                <section class="footer-copyright column-right">
                     <p>Разработано:</p>
                     <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
                 </section>
